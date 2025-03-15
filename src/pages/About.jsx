@@ -1,8 +1,11 @@
 import React from 'react'
+import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      about
+    </div>
   )
 }
 

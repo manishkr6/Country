@@ -80,6 +80,7 @@ button {
 .container {
   max-width: 140rem;
   margin: auto;
+  height: 12px;
 }
 
 .grid {
