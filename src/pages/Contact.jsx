@@ -9,7 +9,7 @@ const Contact = () => {
         <form className="flex flex-col gap-10 ">
           <input
             type="text"
-            className="border-2 border-gray-500 h-20 w-full rounded-[8px] placeholder:p-5  "
+            className="input border-2 text-3xl border-gray-500 h-20 w-full rounded-[8px]  "
             required
             autoComplete="off"
             placeholder="Enter your name"
@@ -17,14 +17,14 @@ const Contact = () => {
           />
           <input
             type="email"
-            className="border-2 border-gray-500 h-20 w-full rounded-[8px] placeholder:p-5 "
+            className="input border-2 text-3xl border-gray-500 h-20 w-full rounded-[8px]"
             required
             autoComplete="off"
             placeholder="Enter your email"
             name="email"
           />
           <textarea
-            className="border-2 border-gray-500 h-65 w-full rounded-[8px] placeholder:p-5 "
+            className="input border-2 text-3xl border-gray-500 h-65 w-full rounded-[8px]"
             rows="10"
             required
             autoComplete="off"
@@ -32,7 +32,9 @@ const Contact = () => {
             name="message"
           ></textarea>
 
-          <button type="submit" className="contact-us-btn">Submit</button>
+          <button type="submit" className="contact-us-btn">
+            Submit
+          </button>
         </form>
       </div>
     </section>

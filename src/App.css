@@ -516,6 +516,22 @@ contact us page
   letter-spacing: 1px;
 }
 
+.input {
+  width: 100%;
+  padding: 0.6rem 2.4rem;
+  font-family: "urbanist";
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+  border: 0.05rem solid #fff;
+  
+}
+
+.input:hover {
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
+}
+
 .contact-us-btn {
   gap: 1.2rem;
   font-weight: 500;
