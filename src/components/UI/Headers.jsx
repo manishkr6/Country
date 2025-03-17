@@ -8,12 +8,12 @@ const Headers = () => {
         <div className="grid navbar-grid">
           <div className="Logo">
             <NavLink to="/">
-              <h1>WorldAtlas</h1>
+              <h1 className="text-5xl font-bold">WorldAtlas</h1>
             </NavLink>
           </div>
 
           <nav>
-            <ul>
+            <ul className="text-2xl font-semibold">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>

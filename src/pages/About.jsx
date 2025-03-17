@@ -1,5 +1,6 @@
 import React from "react";
 import countryData from "../api/countryData.json";
+import Footers from "../components/UI/Footers";
 
 const countryFacts = countryData.countries || [];
 
@@ -14,22 +15,26 @@ const About = () => {
 
       <div className="gradient-cards">
         {Array.isArray(countryFacts) && countryFacts.length > 0 ? (
-          countryFacts.map(({ id, countryName, capital, population, interestingFact }) => (
-            <div className="card" key={id}>
-              <div className="container-card bg-blue-box">
-                <p className="card-title">{countryName}</p>
-                <p>
-                  <span className="card-description">Capital:</span> {capital}
-                </p>
-                <p>
-                  <span className="card-description">Population:</span> {population.toLocaleString()}
-                </p>
-                <p>
-                  <span className="card-description">Interesting Fact:</span> {interestingFact}
-                </p>
+          countryFacts.map(
+            ({ id, countryName, capital, population, interestingFact }) => (
+              <div className="card" key={id}>
+                <div className="container-card bg-blue-box">
+                  <p className="card-title">{countryName}</p>
+                  <p>
+                    <span className="card-description">Capital:</span> {capital}
+                  </p>
+                  <p>
+                    <span className="card-description">Population:</span>{" "}
+                    {population.toLocaleString()}
+                  </p>
+                  <p>
+                    <span className="card-description">Interesting Fact:</span>{" "}
+                    {interestingFact}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))
+            )
+          )
         ) : (
           <p>Loading country facts...</p>
         )}

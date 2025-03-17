@@ -8,7 +8,7 @@ const Contact = () => {
   };
 
   return (
-    <section className=" flex gap-20 flex-col items-center">
+    <section className="contact-page flex gap-20 flex-col items-center">
       <h2 className="contact-us-h2 text-6xl leading-tight">Contact Us</h2>
       <div className=" p-10 rounded-lg w-2xl shadow-lg">
         <form action={handleFormSubmit} className="flex flex-col gap-10 ">

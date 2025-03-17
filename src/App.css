@@ -217,6 +217,7 @@ nav ul {
 
 .section-about {
   margin: 0 auto 9rem auto;
+  height: fit-content;
 }
 
 .gradient-cards {
@@ -365,6 +366,7 @@ ul {
 
 .copyright-area {
   background: #202020;
+  margin-top: 7.2rem;
   padding: 25px 0;
 }
 .copyright-text p {
@@ -510,6 +512,10 @@ country Card
 /* ------------------ 
 contact us page 
 --------------- */
+
+.contact-page {
+  margin-bottom: 2rem;
+}
 
 .contact-us-h2 {
   margin-top: 4rem;
