@@ -1,12 +1,17 @@
 import React from "react";
 
 const Contact = () => {
+  const handleFormSubmit = (formData) => {
+    // console.log(formData.entries());
+    const formInputData = Object.fromEntries(formData.entries());
+    console.log(formInputData);
+  };
+
   return (
     <section className=" flex gap-20 flex-col items-center">
       <h2 className="contact-us-h2 text-6xl leading-tight">Contact Us</h2>
-
       <div className=" p-10 rounded-lg w-2xl shadow-lg">
-        <form className="flex flex-col gap-10 ">
+        <form action={handleFormSubmit} className="flex flex-col gap-10 ">
           <input
             type="text"
             className="input border-2 text-3xl border-gray-500 h-20 w-full rounded-[8px]  "
