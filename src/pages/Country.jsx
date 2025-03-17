@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState, useTransition } from "react";
+import { getCountryData } from "../api/postApi";
 
 const Country = () => {
-  return (
-    <div>Country</div>
-  )
-}
+  const [isPending, startTransition] = useTransition();
+  const [countries, setCountries] = useState([])
 
-export default Country
+  useEffect(() => {
+    startTransition(async () => {
+      const res = await getCountryData();
+      console.log('res', res.data)
+    });
+  }, []);
+
+  if (isPending) return <Loader/>;
+
+  return <div>Country</div>;
+};
+
+export default Country;
