@@ -7,3 +7,7 @@ const api = axios.create({
 export const getCountryData = () => {
   return api.get("/all?fields=name,population,region,capital,flag");
 };
+
+export const getCountryIndData = (name) => {
+  return api.get("/all?fields=name,population,region,capital,flag");
+};

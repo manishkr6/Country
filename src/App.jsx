@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import "./App.css";
 import AppLayout from "./components/layout/AppLayout";
 import ErrorPage from "./pages/ErrorPage";
+import CountryDetails from "./components/layout/CountryDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "country", element: <Country /> },
+      { path: "country/:id", element: <CountryDetails /> },
       { path: "contact", element: <Contact /> },
     ],
   },
