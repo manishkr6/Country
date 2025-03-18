@@ -15,11 +15,26 @@ const Country = () => {
     startTransition(async () => {
       const res = await getCountryData();
       setCountries(res.data);
-      console.log(res.data);
     });
   }, []);
 
   if (isPending) return <Loader />;
+
+  const searchCountry = (country) => {
+    if (search) {
+      return country.name.common.toLowerCase().includes(search.toLowerCase());
+    }
+    return country;
+  };
+
+  const filterRegion = (country) => {
+    if (filter === "All") return country;
+    return country.region === filter;
+  };
+
+  const filterCountries = countries.filter(
+    (country) => searchCountry(country) && filterRegion(country)
+  );
 
   return (
     <section className="country-section">
@@ -28,10 +43,12 @@ const Country = () => {
         setSearch={setSearch}
         filter={filter}
         setFilter={setFilter}
+        countries={countries}
+        setCountries={setCountries}
       />
 
       <ul className="grid grid-four-cols">
-        {countries.map((curCountry, index) => {
+        {filterCountries.map((curCountry, index) => {
           return <CountryCard country={curCountry} key={index} />;
         })}
       </ul>
