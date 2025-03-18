@@ -9,5 +9,7 @@ export const getCountryData = () => {
 };
 
 export const getCountryIndData = (name) => {
-  return api.get("/all?fields=name,population,region,capital,flag");
+  return api.get(
+    `/name/${name}?fullText=true&fields=name,population,region,subregion,capital,tld,currencies,languages,borders,flags`
+  );
 };
